@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rava</title><link rel="stylesheet" href="ui.css"><script src="core.js" defer></script><script src="ui.js" defer></script><script src="popup.js" defer></script></head>
+<body data-page="popup">
+  <main class="popup-shell">
+    <header class="popup-header"><div class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span class="wordmark">rava<span>.</span></span></div><button type="button" class="icon-button" id="open-settings" data-title="settings" aria-label="Settings">⚙</button></header>
+    <div class="popup-intro"><h1 data-i18n="tagline"></h1><span class="status-pill" id="connection-status" role="status"></span></div>
+    <button type="button" id="setup-key" class="setup-banner" hidden><span>✦</span><span data-i18n="noKey"></span><span>↗</span></button>
+    <div class="popup-defaults"><label class="compact-select"><span data-i18n="target"></span><select id="play-target" data-languages></select></label><button class="text-button" type="button" id="pause-site" hidden></button></div>
+    <div class="tone-tabs" id="quick-tones" role="group" aria-label="Translation voice"></div>
+    <select id="play-tone" aria-label="Translation voice" hidden><option value="tweet">Social</option><option value="casual">Casual</option><option value="natural">Natural</option><option value="formal">Formal</option></select>
+    <div class="editor"><div class="editor-label"><span data-i18n="quick"></span><span id="char-count" dir="ltr">0 / 12,000</span></div><textarea id="source-text" rows="3" maxlength="12000" dir="auto" data-placeholder="inputPlaceholder"></textarea></div>
+    <div class="popup-translate"><button type="button" id="translate" class="button primary full"><span data-i18n="translate"></span><span aria-hidden="true">↗</span></button><button type="button" id="stop" class="button secondary" data-i18n="cancel" hidden></button></div>
+    <div class="translation-output compact-output" id="popup-output" hidden><div class="output-header"><span id="translation-status" role="status"></span><span aria-hidden="true">✳</span></div><div id="empty-result" hidden></div><div id="translation-result" class="translation-text" dir="auto" hidden></div><p id="translation-error" class="translation-error" role="alert" hidden></p><div id="result-actions" class="result-actions" hidden><button type="button" id="copy-result" class="button output-button" data-i18n="copy"></button><button type="button" id="favorite-result" class="button output-button" data-i18n="favorite"></button></div></div>
+    <footer class="popup-footer"><div class="keyboard-note"><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd><span data-i18n="step1"></span></div><button class="text-button" type="button" id="more-settings" data-i18n="openSettings"></button><span class="creator-credit" data-i18n="madeBy"></span></footer>
+  </main>
+</body>
+</html>

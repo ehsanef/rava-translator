@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rava · ترجمه به زبان خودت</title><link rel="icon" href="icons/icon32.png"><link rel="stylesheet" href="ui.css"><script src="core.js" defer></script><script src="ui.js" defer></script><script src="options.js" defer></script></head>
+<body data-page="options">
+  <div class="app-shell">
+    <header class="masthead"><a class="brand" href="options.html" aria-label="Rava home"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span class="wordmark">rava<span>.</span></span><span class="brand-caption" data-i18n="tagline"></span></a><div class="masthead-actions"><span class="status-pill" id="connection-status" role="status"></span><select id="ui-switch" aria-label="Interface language"><option value="fa">فارسی</option><option value="en">English</option></select></div></header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><span class="eyebrow"><span class="mini-spark">✳</span><span data-i18n="heroTag"></span></span><h1 data-i18n="heroTitle"></h1><p data-i18n="heroText"></p><div class="keyboard-note"><kbd>Alt</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>T</kbd><span class="keyboard-note-label" data-i18n="step1"></span></div></div>
+        <div class="hero-art" aria-label="Illustrative translation preview">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="art-spark" aria-hidden="true">✳</span>
+          <div class="sample-card source-card"><span class="small-label">THE ORIGINAL</span><p dir="ltr">“I was going to take a quick break.<br>Three hours later, here we are.”</p><span class="sample-underline" aria-hidden="true"></span></div>
+          <div class="sample-card translation-card"><div class="sample-head"><span class="small-label" data-i18n="tweet"></span><span class="pill-small">EN <span aria-hidden="true">↗</span> FA</span></div><p dir="rtl" data-i18n="sampleTranslation"></p><div class="sample-bottom"><span>✦ RAVA</span><span class="sample-cursor" aria-hidden="true">↖</span></div></div>
+          <span class="example-caption" data-i18n="exampleLabel"></span>
+        </div>
+      </section>
+      <div class="section-rule"><span data-i18n="how"></span><ol class="steps"><li><span>01</span><span data-i18n="step1"></span></li><li><span>02</span><span data-i18n="step2"></span></li><li><span>03</span><span data-i18n="step3"></span></li></ol></div>
+      <div class="workspace">
+        <form id="settings-form" class="settings-column">
+          <section class="card connect-card"><div class="section-heading"><span class="section-icon">⌁</span><div><h2 data-i18n="setupTitle"></h2><p data-i18n="setupSub"></p></div></div>
+            <label class="field-label" for="api-key" data-i18n="key"></label>
+            <div class="key-field"><input type="password" id="api-key" autocomplete="off" spellcheck="false" dir="ltr" maxlength="256" data-placeholder="keyPlaceholder"><button type="button" id="reveal-key" class="icon-button" data-title="showKey" aria-label="Show or hide API key">◉</button></div>
+            <div class="field-meta"><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" data-i18n="getKey"></a><button type="button" id="remove-key" class="text-button muted" data-i18n="removeKey" hidden></button></div>
+            <label class="checkbox-row"><input type="checkbox" id="remember" checked><span data-i18n="remember"></span></label><p class="hint" data-i18n="rememberHelp"></p>
+            <button class="button secondary full" id="test-key" type="button" data-i18n="test"></button><p id="test-status" class="message" role="status" hidden></p>
+            <p class="hint" data-i18n="connectionNote"></p>
+            <div class="field-block"><label class="field-label" for="model" data-i18n="model"></label><input id="model" dir="ltr" list="model-list" maxlength="107" spellcheck="false" required pattern="gemini-[a-z0-9._-]{1,100}"><datalist id="model-list"><option value="gemini-3.7-flash"></option><option value="gemini-2.5-flash-lite"></option><option value="gemini-3.1-flash-lite"></option><option value="gemini-3.5-flash-lite"></option><option value="gemini-2.5-flash"></option></datalist><button type="button" id="quick-model" class="text-button" data-i18n="fastModel"></button><p class="hint" data-i18n="modelHelp"></p></div>
+          </section>
+          <section class="card preference-card"><div class="section-heading"><span class="section-icon">≋</span><div><h2 data-i18n="preferences"></h2><p data-i18n="preferencesSub"></p></div></div>
+            <label class="field-label" for="default-target" data-i18n="target"></label><select id="default-target" data-languages></select>
+            <p class="field-label" data-i18n="tone"></p><div id="default-tones" class="tone-cards" role="group" aria-label="Default translation voice"></div>
+            <details class="advanced"><summary data-i18n="advanced"></summary><div class="field-block"><label class="field-label" for="custom-style" data-i18n="custom"></label><textarea id="custom-style" maxlength="600" rows="3" data-placeholder="customPlaceholder"></textarea></div><div class="field-block"><label class="field-label" for="theme" data-i18n="theme"></label><select id="theme"><option value="light" data-i18n="light"></option><option value="dark" data-i18n="dark"></option><option value="system" data-i18n="system"></option></select></div><label class="checkbox-row"><input type="checkbox" id="enabled" checked><span data-i18n="enabled"></span></label><p class="hint" data-i18n="enabledHelp"></p><div class="field-block"><span class="field-label" data-i18n="pausedSites"></span><div id="paused-sites"></div></div></details>
+            <button type="submit" class="button primary full" id="save-settings" data-i18n="saveSettings"></button><p id="save-status" class="message" role="status" hidden></p>
+          </section>
+          <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">◇</span><div><strong data-i18n="privacy"></strong><p data-i18n="privacyDetail"></p></div></div>
+        </form>
+        <div class="main-column">
+          <section class="card playground"><div class="section-heading"><span class="section-icon lime">✦</span><div><h2 data-i18n="playground"></h2><p data-i18n="playgroundSub"></p></div><button type="button" id="sample" class="text-button push" data-i18n="sample"></button></div>
+            <div class="editor"><div class="editor-label"><span data-i18n="source"></span><span id="char-count" dir="ltr">0 / 12,000</span></div><textarea id="source-text" rows="5" maxlength="12000" dir="auto" data-placeholder="inputPlaceholder"></textarea></div>
+            <div class="translation-toolbar"><label class="compact-select"><span data-i18n="target"></span><select id="play-target" data-languages></select></label><select id="play-tone" aria-label="Translation voice"><option value="tweet" data-i18n="tweet"></option><option value="casual" data-i18n="casual"></option><option value="natural" data-i18n="natural"></option><option value="formal" data-i18n="formal"></option></select><button type="button" id="translate" class="button primary push"><span data-i18n="translate"></span><span aria-hidden="true">↗</span></button><button type="button" id="stop" class="button secondary" data-i18n="cancel" hidden></button></div>
+            <div class="translation-output"><div class="output-header"><span id="translation-status" role="status" data-i18n="result"></span><span class="output-star" aria-hidden="true">✳</span></div><div id="empty-result" class="empty-result"><span class="empty-glyph" aria-hidden="true">“</span><h3 data-i18n="emptyResult"></h3><p data-i18n="emptyHint"></p></div><div id="translation-result" class="translation-text" dir="auto" hidden></div><p id="translation-error" class="translation-error" role="alert" hidden></p><div id="result-actions" class="result-actions" hidden><button type="button" id="copy-result" class="button output-button" data-i18n="copy"></button><button type="button" id="favorite-result" class="button output-button" data-i18n="favorite"></button></div></div>
+            <div class="playground-foot"><span aria-hidden="true">◇</span><span data-i18n="selectedOnly"></span></div>
+          </section>
+          <section class="card favorites-card"><div class="section-heading"><span class="section-icon">⌑</span><div><h2><span data-i18n="favorites"></span> <span class="number-pill" id="favorite-count">0</span></h2><p data-i18n="favoriteNote"></p></div><button type="button" class="text-button push muted" id="clear-favorites" data-i18n="clearFavorites" hidden></button></div><div id="favorites-list"></div></section>
+          <p class="support-note" data-i18n="reloadHint"></p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer"><span class="wordmark">rava<span>.</span></span><span data-i18n="madeBy"></span><span class="version">v1.2.0 · Made for your words</span></footer>
+  </div>
+</body>
+</html>

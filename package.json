@@ -1,0 +1,13 @@
+{
+  "name": "rava-translator",
+  "version": "1.2.0",
+  "private": true,
+  "description": "In-page Chrome translation with natural and social voices, powered by your own Gemini API key.",
+  "author": "Ehsanef",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
